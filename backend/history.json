@@ -1,0 +1,116 @@
+[
+  {
+    "id": "952e0a60-56be-4d8c-831f-f9c2503a8819",
+    "timestamp": "2026-06-12T18:38:33.174762",
+    "intended_file": "database_config.yaml",
+    "actual_file": "database_config.yaml",
+    "total_drifts": 4,
+    "breaking_count": 2,
+    "functional_count": 2,
+    "cosmetic_count": 0,
+    "risk_score": 80,
+    "drifts": [
+      {
+        "key": "server.port",
+        "type": "Value Changed",
+        "old_value": 8080,
+        "new_value": 9090,
+        "severity": "Breaking",
+        "explanation": "Network port changed from '8080' to '9090'.",
+        "impact": "Changes the port the service listens on. Can cause connectivity issues or conflict with other services.",
+        "risk_level": "High",
+        "recommendation": "Verify firewall rules allow incoming traffic on port '9090' and that no other services are using this port."
+      },
+      {
+        "key": "server.ssl.enabled",
+        "type": "Value Changed",
+        "old_value": true,
+        "new_value": false,
+        "severity": "Breaking",
+        "explanation": "SSL/TLS security setting 'server.ssl.enabled' changed.",
+        "impact": "Altering security protocols may expose data in transit, disable encryption, or cause client connection handshakes to fail.",
+        "risk_level": "Critical",
+        "recommendation": "Ensure SSL certificates are valid and secure protocols (TLS 1.2/1.3) are enforced. Do not disable SSL in production."
+      },
+      {
+        "key": "server.timeout_ms",
+        "type": "Value Changed",
+        "old_value": 5000,
+        "new_value": 10000,
+        "severity": "Functional",
+        "explanation": "Timeout setting 'server.timeout_ms' changed from '5000' to '10000'.",
+        "impact": "Modifies the time the system waits for an operation to complete. High values cause resource exhaustion; low values cause premature request failures.",
+        "risk_level": "Medium",
+        "recommendation": "Tune timeout parameters based on average latency and SLA. Monitor for timeout exceptions or leakages."
+      },
+      {
+        "key": "server.debug",
+        "type": "Configuration Added",
+        "old_value": null,
+        "new_value": true,
+        "severity": "Functional",
+        "explanation": "Debug mode changed from 'None' to 'True'.",
+        "impact": "Enabling debug mode in production exposes detailed stack traces, environment variables, and sensitive logs to end-users.",
+        "risk_level": "High",
+        "recommendation": "Disable debug mode (set to false) in production environments immediately."
+      }
+    ]
+  },
+  {
+    "id": "da6ce56f-f552-40ec-9cea-987062f1823f",
+    "timestamp": "2026-06-12T18:30:55.574376",
+    "intended_file": "database_config.yaml",
+    "actual_file": "database_config.yaml",
+    "total_drifts": 4,
+    "breaking_count": 3,
+    "functional_count": 0,
+    "cosmetic_count": 1,
+    "risk_score": 92,
+    "drifts": [
+      {
+        "key": "database.url",
+        "type": "Value Changed",
+        "old_value": "postgresql://admin:secret_password@db-host:5432/db_prod",
+        "new_value": "postgresql://admin:different_password@db-host:5432/db_prod",
+        "severity": "Breaking",
+        "explanation": "Database configuration 'database.url' changed from 'postgresql://admin:secret_password@db-host:5432/db_prod' to 'postgresql://admin:different_password@db-host:5432/db_prod'.",
+        "impact": "Points the application to a different database instance or modifies database access parameters. Could result in data mismatch, connectivity failures, or data loss.",
+        "risk_level": "Critical",
+        "recommendation": "Verify the database connection string and credentials. Ensure the target database is healthy and has the correct schema."
+      },
+      {
+        "key": "database.max_connections",
+        "type": "Value Changed",
+        "old_value": 50,
+        "new_value": 100,
+        "severity": "Breaking",
+        "explanation": "Database configuration 'database.max_connections' changed from '50' to '100'.",
+        "impact": "Points the application to a different database instance or modifies database access parameters. Could result in data mismatch, connectivity failures, or data loss.",
+        "risk_level": "Critical",
+        "recommendation": "Verify the database connection string and credentials. Ensure the target database is healthy and has the correct schema."
+      },
+      {
+        "key": "database.pool_timeout",
+        "type": "Value Changed",
+        "old_value": 30,
+        "new_value": 45,
+        "severity": "Breaking",
+        "explanation": "Database configuration 'database.pool_timeout' changed from '30' to '45'.",
+        "impact": "Points the application to a different database instance or modifies database access parameters. Could result in data mismatch, connectivity failures, or data loss.",
+        "risk_level": "Critical",
+        "recommendation": "Verify the database connection string and credentials. Ensure the target database is healthy and has the correct schema."
+      },
+      {
+        "key": "metadata.description",
+        "type": "Value Changed",
+        "old_value": "Primary database connection pool setup",
+        "new_value": "Updated database connection setup",
+        "severity": "Cosmetic",
+        "explanation": "Cosmetic metadata configuration 'metadata.description' updated from 'Primary database connection pool setup' to 'Updated database connection setup'.",
+        "impact": "No operational impact on system functionality or performance. Changes are descriptive or presentation-oriented.",
+        "risk_level": "Low",
+        "recommendation": "Verify document accuracy and check if spelling is correct."
+      }
+    ]
+  }
+]
