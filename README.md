@@ -104,9 +104,11 @@ Gemini AI Analysis
 - Gemini AI analysis depends on API availability.
 
 ---
+## Project Links
 
-## Live Demo
+GitHub Repository:
+https://github.com/saicharan-122/Config-Drift-Detector
 
-Render Deployment URL
-
+Live Demo:
+https://config-drift-detector.onrender.com
 ---
