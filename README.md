@@ -117,7 +117,7 @@ Gemini AI Analysis
 ## Project Links
 
 GitHub Repository:
-https://github.com/saicharan-122/Config-Drift-Detector
+[https://github.com/tanuja545/Config-Drift-Detector.git]
 
 Live Demo:
 https://config-drift-detector.onrender.com
