@@ -112,3 +112,7 @@ https://github.com/saicharan-122/Config-Drift-Detector
 Live Demo:
 https://config-drift-detector.onrender.com
 ---
+
+## Team Members
+- Tanuja Pentakota
+- Saicharan
