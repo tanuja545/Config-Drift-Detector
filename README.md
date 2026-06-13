@@ -104,6 +104,16 @@ Gemini AI Analysis
 - Gemini AI analysis depends on API availability.
 
 ---
+
+## Team Members
+
+- Pappala Devi Sai Charan
+- Pentakota Tanuja
+- Peela Divya Santhoshi Laxmi
+- Bevara Lize
+
+---
+
 ## Project Links
 
 GitHub Repository:
@@ -113,8 +123,4 @@ Live Demo:
 https://config-drift-detector.onrender.com
 ---
 
-## Team Members
-- Pappala Devi Sai Charan
-- Pentakota Tanuja
-- Peela Divya Santhoshi Laxmi
-- Bevara Lize
+
