@@ -114,5 +114,7 @@ https://config-drift-detector.onrender.com
 ---
 
 ## Team Members
-- Tanuja Pentakota
-- Saicharan
+- Pappala Devi Sai Charan
+- Pentakota Tanuja
+- Peela Divya Santhoshi Laxmi
+- Bevara Lize
